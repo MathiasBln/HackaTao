@@ -1,4 +1,5 @@
 .navbar {
+    z-index:  10;
     background-color: $primary-color;
     height: 80px;
     margin: 0;
@@ -30,5 +31,5 @@ a:link, a:visited {
 }
 
 a:active {
-    color: "#ffffff";
+    color: #ffffff;
 }

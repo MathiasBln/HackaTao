@@ -5,7 +5,7 @@ main {
     height: 100%;
 
     .meteo {
-        padding-top: 80px;
+
 
         h1 {
             font-size: 26px;
@@ -32,7 +32,7 @@ main {
             align-items: center;
             justify-content: center;
             position: relative;
-        box-shadow: $shadow;+-
+            box-shadow: $shadow;
 
             .trait {
                 height: 50%;
