@@ -1,5 +1,10 @@
 main {
+    position: relative;
+    height: 100%;
+
     .meteo {
+        padding-top: 80px;
+
         h1 {
             font-size: 26px;
             margin: 20px 0 10px 30px;
@@ -17,7 +22,7 @@ main {
             margin: auto;
             padding-top: 20px !important;
             width: 90% !important;
-            height: 180px;
+            height: 170px;
             background-color: white !important;
             border-radius: $radius;
             display: flex;
@@ -56,7 +61,7 @@ main {
             height: auto;
             width: 100%;
             background-color: $primary-color;
-            padding: 20px 0;
+            padding: 15px 0;
             color: white;
             border-radius: $radius $radius 0 0;
 
@@ -78,6 +83,7 @@ main {
             height: auto;
             background-color: white;
             border-radius: 0 0 $radius $radius;
+            padding: 10px 0;
 
             .infos {
                 margin-left: 20px;
@@ -85,7 +91,7 @@ main {
                 h3 {
                     color: $primary-color;
                     font-weight: 500;
-                    margin-bottom: 5px;
+                    margin: 0 0 5px 0;
 
                 }
 
@@ -96,9 +102,9 @@ main {
                 }
 
                 p {
-                    margin-top: 0;
+                    margin: 0;
                     font-weight: 300;
-                    color:$font-color;
+                    color: $font-color;
                 }
             }
 
@@ -109,6 +115,53 @@ main {
                 margin-right: 20px;
             }
 
+        }
+    }
+
+    .bot {
+        width: 95%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        box-sizing: border-box;
+
+        .robot {
+            height: 45px;
+            width: 45px;
+            border-radius: 50%;
+            background-color: white;
+            margin-right: 10px;
+        }
+
+        .messages {
+            display: flex;
+            flex-direction: column;
+            box-sizing: content-box;
+
+            .message {
+                height: auto;
+                width: fit-content;
+                margin: 2px 0 ;
+                background-color: $primary-color;
+                color: white;
+                padding: 6px 15px 7px 17px;
+                font-size: 1.2em;
+            }
+
+            .pollution_message {
+                 border-radius: $message-radius $message-radius $message-radius 2px;
+             }
+
+            .meteo_message {
+                border-radius: 2px $message-radius $message-radius 2px;
+            }
+
+            .recomandation_message {
+                border-radius: 2px $message-radius $message-radius $message-radius;
+            }
         }
     }
 }
