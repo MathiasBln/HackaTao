@@ -19,7 +19,7 @@ class HomeController extends AbstractController
     public function index()
     {
         $client = HttpClient::create();
-        $response = $client->request('GET', 'https://data.orleans-metropole.fr/api/records/1.0/search/?dataset=air-quality&lang=Fr&sort=measurements_value&facet=location&facet=measurements_parameter&facet=measurements_sourcename&facet=measurements_lastupdated');
+        $response = $client->request('GET', 'https://data.orleans-metropole.fr/api/records/1.0/search/?apikey=7c4e7563fc30cc228d982e4885d812cb7b22654d3539c190b016c972&dataset=air-quality&lang=Fr&sort=measurements_value&facet=location&facet=measurements_parameter&facet=measurements_sourcename&facet=measurements_lastupdated');
         $content = $response->toArray();
         $date = new \DateTime();
         $day = date_format($date, 'Y-m');
