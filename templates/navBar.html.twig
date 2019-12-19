@@ -1,11 +1,12 @@
 <div class="navbar">
+    <div class="w-100 head_container">
     <h1 class="title">{% if page == 'meteo' %}Météo{% elseif page == 'bus' %}Bus/Tram{% elseif page == 'velo' %}Vélo+{% elseif page == 'parking' %}Parkings{% endif %}</h1>
     <div class="theme-switch-wrapper">
         <input class = "tgl tgl-flip" id="checkbox" type="checkbox"/>
         <label class = "theme-switch tgl-btn" data-tg-off = "Jedi" data-tg-on="Sith" for="checkbox">
             <div class="slider round"></div>
         </label>
-
+    </div>
     </div>
     <div class="full_nav">
         <div class="items">

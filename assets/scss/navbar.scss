@@ -1,5 +1,5 @@
 .navbar {
-    background-color: $primary-color;
+    background-color: var(--primary-color);
     margin: 0;
     height: 81px;
 
@@ -10,6 +10,8 @@
         padding-left: 15px;
         font-weight: 400;
         font-size: 1.4em;
+        height: auto;
+        width: 150px;
     }
 
     .full_nav {

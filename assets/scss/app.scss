@@ -19,19 +19,24 @@ body {
 @import url(https://fonts.googleapis.com/css?family=Lato:400,400italic,700|Sansita+One);
 
 :root {
-    --primary-color: #302AE6;
+    --primary-color: #46B4C7;
     --secondary-color: #536390;
-    --font-color: #424242;
+    --font-color: #4f4f4f;
     --bg-color: #fff;
     --heading-color: #292922;
 }
 
 [data-theme="dark"] {
-    --primary-color: #9A97F3;
+    --primary-color: #b8041f;
     --secondary-color: #818cab;
     --font-color: #e1e1ff;
     --bg-color: #161625;
     --heading-color: #818cab;
+}
+
+.head_container {
+    display: flex;
+    justify-content: space-between;
 }
 
 body {
@@ -49,6 +54,8 @@ body {
 .theme-switch-wrapper {
     display: flex;
     align-items: center;
+    width: 60px;
+    margin: 10px 10px 0 0;
 }
 
 .theme-switch {
@@ -111,11 +118,9 @@ input:checked + .slider:before {
 }
 .tgl-flip + .tgl-btn:after {
     content: attr(data-tg-on);
-    background: #02C66F;
     transform: rotateY(-180deg);
 }
 .tgl-flip + .tgl-btn:before {
-    background: #02C66F;
     content: attr(data-tg-off);
 }
 
@@ -124,5 +129,4 @@ input:checked + .slider:before {
 }
 .tgl-flip:checked + .tgl-btn:after {
     transform: rotateY(0);
-    background: #FF3A19;
 }

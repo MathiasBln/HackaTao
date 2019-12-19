@@ -10,13 +10,13 @@ main {
         h1 {
             font-size: 26px;
             margin: 20px 0 10px 30px;
-            color: $font-color;
+            color: var(--font-color);
             font-weight: 300;
         }
 
         .underline {
             width: 100px;
-            border: solid $font-color 1px;
+            border: solid var(--primary-color) 1px;
             margin-bottom: 20px;
         }
 
@@ -38,7 +38,7 @@ main {
                 height: 50%;
                 width: 100%;
                 position: absolute;
-                border-bottom: solid #d5d5d5 1.5px;
+                border-bottom: solid var(--primary-color) 1.5px;
                 top: 0;
             }
 
@@ -62,7 +62,7 @@ main {
 
             height: auto;
             width: 100%;
-            background-color: $primary-color;
+            background-color: var(--primary-color);
             padding: 15px 0;
             color: white;
             border-radius: $radius $radius 0 0;
@@ -148,7 +148,7 @@ main {
                 height: auto;
                 width: fit-content;
                 margin: 2px 0 ;
-                background-color: $primary-color;
+                background-color: var(--primary-color);
                 color: white;
                 padding: 6px 15px 7px 17px;
                 font-size: 1.2em;
