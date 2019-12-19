@@ -1,3 +1,132 @@
+$radius:6px;
+$font-color: #4f4f4f;
+$primary-color:#46B4C7;
+$shadow: 0 3px 9px -2px rgba(0, 0, 0, 0.39);
+$message-radius:20px;
+
+
+@import url('https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900&display=swap');
+@import "home.scss";
+
 body {
-    background-color: lightgray;
+    background-color: whitesmoke;
+    margin: 0;
+    font-family: 'Rubik', sans-serif ;
+    height: 100vh;
+    overflow: hidden;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Lato:400,400italic,700|Sansita+One);
+
+:root {
+    --primary-color: #46B4C7;
+    --secondary-color: #536390;
+    --font-color: #4f4f4f;
+    --bg-color: #fff;
+    --heading-color: #292922;
+}
+
+[data-theme="dark"] {
+    --primary-color: #b8041f;
+    --secondary-color: #818cab;
+    --font-color: #ffffff;
+    --bg-color: #000000;
+    --heading-color: #818cab;
+    --saber:rgb(225,17,17);
+}
+
+.head_container {
+    display: flex;
+    justify-content: space-between;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--font-color);
+}
+
+
+.post-meta {
+    color: var(--secondary-color);
+}
+
+
+/*slider switch css */
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    width: 60px;
+    margin: 10px 10px 0 0;
+}
+
+.theme-switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+}
+
+.theme-switch input {
+    display:none;
+}
+
+input:checked + .slider {
+    background-color: #4dbbb1;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.tgl {
+    display: none;
+}
+.tgl, .tgl:after, .tgl:before, .tgl *, .tgl *:after, .tgl *:before, .tgl + .tgl-btn {
+    box-sizing: border-box;
+}
+
+
+.tgl + .tgl-btn {
+    outline: 0;
+    display: block;
+    width: 4em;
+    height: 2em;
+    position: relative;
+}
+
+.tgl-flip + .tgl-btn:after, .tgl-flip + .tgl-btn:before {
+    display: inline-block;
+    transition: all .4s ease;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    line-height: 2em;
+    font-weight: bold;
+    color: #fff;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    border-radius: 4px;
+}
+.tgl-flip + .tgl-btn:after {
+    content: attr(data-tg-on);
+    transform: rotateY(-180deg);
+}
+.tgl-flip + .tgl-btn:before {
+    content: attr(data-tg-off);
+}
+
+.tgl-flip:checked + .tgl-btn:before {
+    transform: rotateY(180deg);
+}
+.tgl-flip:checked + .tgl-btn:after {
+    transform: rotateY(0);
 }

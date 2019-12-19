@@ -1,0 +1,176 @@
+@import "navbar.scss";
+
+main {
+    position: relative;
+    height: 85%;
+
+    .meteo {
+
+
+        h1 {
+            font-size: 26px;
+            margin: 20px 0 10px 30px;
+            color: var(--font-color);
+            font-weight: 300;
+        }
+
+        .underline {
+            width: 100px;
+            border: solid var(--primary-color) 1px;
+            margin-bottom: 20px;
+            box-shadow: 9px 0px 83px 26px var(--saber);
+        }
+
+        .widjet_meteo {
+            margin: auto;
+            padding-top: 20px !important;
+            width: 90% !important;
+            height: 170px;
+            background-color: white !important;
+            border-radius: $radius;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            box-shadow: $shadow;
+
+            .trait {
+                height: 50%;
+                width: 100%;
+                position: absolute;
+                border-bottom: solid var(--primary-color) 1.5px;
+                top: 0;
+            }
+
+            #l_0f8126506a770d11c99a6e11091d0cbe {
+                display: none;
+            }
+        }
+    }
+
+    .temperature {
+        width: 90%;
+        margin: 25px auto 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: $shadow;
+        border-radius: $radius;
+
+        .head {
+
+            height: auto;
+            width: 100%;
+            background-color: var(--primary-color);
+            padding: 15px 0;
+            color: white;
+            border-radius: $radius $radius 0 0;
+
+            h2 {
+                margin: 0 20px;
+                font-weight: 500;
+            }
+
+            p {
+                margin: 5px 20px 0 20px;
+            }
+        }
+
+        .fenetre_pollution {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: auto;
+            background-color: white;
+            border-radius: 0 0 $radius $radius;
+            padding: 10px 0;
+
+            .infos {
+                margin-left: 20px;
+
+                h3 {
+                    color: $primary-color;
+                    font-weight: 500;
+                    margin: 0 0 5px 0;
+
+                }
+
+                h2 {
+                    font-weight: 500;
+                    color: $font-color;
+                    margin: 0;
+                }
+
+                p {
+                    margin: 0;
+                    font-weight: 300;
+                    color: $font-color;
+                }
+            }
+
+            .pastille {
+                height: 60px;
+                width: 60px;
+                border-radius: 50%;
+                margin-right: 20px;
+                box-shadow: $shadow;
+            }
+
+        }
+    }
+
+    .bot {
+        width: 95%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        box-sizing: border-box;
+
+        .robot {
+            height: 45px;
+            width: 45px;
+            border-radius: 50%;
+            background-color: white;
+            margin-right: 10px;
+
+            .fill {
+                fill: var(--primary-color);
+            }
+        }
+
+        .messages {
+            display: flex;
+            flex-direction: column;
+            box-sizing: content-box;
+
+            .message {
+                height: auto;
+                width: fit-content;
+                margin: 2px 0 ;
+                background-color: var(--primary-color);
+                color: white;
+                padding: 6px 15px 7px 17px;
+                font-size: 1.2em;
+                box-shadow: 14px 0 35px 0 var(--saber);
+            }
+
+            .pollution_message {
+                 border-radius: $message-radius $message-radius $message-radius 2px;
+             }
+
+            .meteo_message {
+                border-radius: 2px $message-radius $message-radius 2px;
+            }
+
+            .recomandation_message {
+                border-radius: 2px $message-radius $message-radius $message-radius;
+            }
+        }
+    }
+}

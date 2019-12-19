@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+{% set page = "meteo" %}
+{% block title %}Météo{% endblock %}
+
+{% block body %}
+    {% include 'home/widjet.html.twig' %}
+    {% include 'home/temperature.html.twig' %}
+    {% include 'home/bot.html.twig' %}
+{% endblock %}
