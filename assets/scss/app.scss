@@ -29,9 +29,10 @@ body {
 [data-theme="dark"] {
     --primary-color: #b8041f;
     --secondary-color: #818cab;
-    --font-color: #e1e1ff;
-    --bg-color: #161625;
+    --font-color: #ffffff;
+    --bg-color: #000000;
     --heading-color: #818cab;
+    --saber:rgb(225,17,17);
 }
 
 .head_container {
@@ -110,7 +111,6 @@ input:checked + .slider:before {
     line-height: 2em;
     font-weight: bold;
     color: #fff;
-    position: absolute;
     top: 0;
     left: 0;
     backface-visibility: hidden;

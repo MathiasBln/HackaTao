@@ -18,6 +18,7 @@ main {
             width: 100px;
             border: solid var(--primary-color) 1px;
             margin-bottom: 20px;
+            box-shadow: 9px 0px 83px 26px var(--saber);
         }
 
         .widjet_meteo {
@@ -137,6 +138,10 @@ main {
             border-radius: 50%;
             background-color: white;
             margin-right: 10px;
+
+            .fill {
+                fill: var(--primary-color);
+            }
         }
 
         .messages {
@@ -152,6 +157,7 @@ main {
                 color: white;
                 padding: 6px 15px 7px 17px;
                 font-size: 1.2em;
+                box-shadow: 14px 0 35px 0 var(--saber);
             }
 
             .pollution_message {
