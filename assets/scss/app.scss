@@ -1,8 +1,16 @@
-@import url('https://fonts.googleapis.com/css?family=Rubik:400,500,700,900&display=swap');
+$radius:6px;
+$font-color: #4f4f4f;
+$primary-color:#46B4C7;
+$shadow: 0 3px 9px -2px rgba(0, 0, 0, 0.39);
+
+
+@import url('https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900&display=swap');
 @import "home.scss";
 
 body {
     background-color: whitesmoke;
     margin: 0;
     font-family: 'Rubik', sans-serif ;
+    height: 100vh;
+    overflow: hidden;
 }
