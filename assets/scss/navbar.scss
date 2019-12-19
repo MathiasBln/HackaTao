@@ -1,0 +1,18 @@
+.navbar {
+    background-color: #707070;
+}
+
+.navbar-nav {
+    height: 24px;
+    display: flex;
+    flex-direction: row;
+}
+.nav-item {
+   list-style-type: none;
+}
+
+.title {
+    color: #ffffff;
+    margin-top: 15px;
+    margin-left: 15px;
+}
