@@ -24,6 +24,7 @@ body {
     --font-color: #4f4f4f;
     --bg-color: #fff;
     --heading-color: #292922;
+    --picture: "https://cdn2.iconfinder.com/data/icons/starwars/icons/128/R2-D2.png";
 }
 
 [data-theme="dark"] {
@@ -33,6 +34,7 @@ body {
     --bg-color: #000000;
     --heading-color: #818cab;
     --saber:rgb(225,17,17);
+    --picture: "https://cdn0.iconfinder.com/data/icons/star-wars/512/clone-256.png";
 }
 
 .head_container {
