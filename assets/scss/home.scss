@@ -1,0 +1,41 @@
+.meteo {
+    h1 {
+        font-size: 26px;
+        margin: 20px 0 10px 30px;
+        color: #707070;
+        font-weight: 300;
+    }
+
+    .underline {
+        width: 100px;
+        border: solid #707070 1px;
+        margin-bottom: 20px;
+    }
+
+    .widjet_meteo {
+        margin: auto;
+        padding-top: 20px !important;
+        width: 90% !important;
+        height: 180px;
+        background-color: white !important;
+        border-radius: 6px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        box-shadow: 0 3px 9px -2px rgba(0, 0, 0, 0.39);
+
+        .trait {
+            height: 50%;
+            width: 100%;
+            position: absolute;
+            border-bottom: solid #d5d5d5 1.5px;
+            top: 0;
+        }
+
+        #l_0f8126506a770d11c99a6e11091d0cbe {
+            display: none;
+        }
+    }
+}
