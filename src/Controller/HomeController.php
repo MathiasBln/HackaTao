@@ -31,26 +31,26 @@ class HomeController extends AbstractController
         }
 
         if ($AQI <= 50) {
-            $color = '#019865';
+            $image = 'https://cdn2.iconfinder.com/data/icons/starwars/icons/128/clone-1.png';
             $index = 'Bonne';
             $pollutionMessage = "Niveau de pollution faible ;)";
         } elseif (50 < $AQI && $AQI <= 100) {
-            $color = '#FCDF30';
+            $image = 'https://cdn2.iconfinder.com/data/icons/starwars/icons/128/clone-4.png';
             $index = 'Modérée';
             $pollutionMessage = "Niveau de pollution modérée :)";
         } elseif (100 < $AQI && $AQI <= 150) {
-            $color = '#F89839';
+            $image = 'https://cdn2.iconfinder.com/data/icons/starwars/icons/128/clone-2.png';
             $index = 'élevée';
             $pollutionMessage = "Niveau de pollution élevée !";
         } else {
-            $color = '#CE1F37';
+            $image = 'https://cdn2.iconfinder.com/data/icons/starwars/icons/128/clone-3.png';
             $index = 'Dangereuse';
             $pollutionMessage = "Niveau de pollution trop élevée !";
         }
 
 
         $client = HttpClient::create();
-        $response = $client->request('GET', 'https://api.meteo-concept.com/api/forecast/nextHours/?token=e68c1dac48cfc3ea6e33883169ca4752d32db7cff364fee7c292a3c0173ed023&insee=45234');
+        $response = $client->request('GET', 'https://api.meteo-concept.com/api/forecast/nextHours/?token=c2de9bb2de53a2e3d96d8e35a6437939d959cf9b19de03557f4ae8505098a35a&insee=45234');
         $content = $response->toArray();
         $probaPluie = $content['forecast'][0]['probarain'];
 
@@ -68,7 +68,7 @@ class HomeController extends AbstractController
 
         return $this->render('home/index.html.twig', [
             "AQI" => $AQI,
-            "color" => $color,
+            "image" => $image,
             "index" => $index,
             "pollutionMessage" => $pollutionMessage,
             "meteoMessage" => $meteoMessage,
