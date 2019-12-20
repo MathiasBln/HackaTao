@@ -2,14 +2,15 @@
 
 main {
     position: relative;
-    height: 85%;
+    height: 82vh;
+    overflow: hidden;
 
     .meteo {
 
 
         h1 {
             font-size: 26px;
-            margin: 20px 0 10px 30px;
+            margin: 5px 0 5px 30px;
             color: var(--font-color);
             font-weight: 300;
         }
@@ -17,7 +18,7 @@ main {
         .underline {
             width: 100px;
             border: solid var(--primary-color) 1px;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             box-shadow: 9px 0px 83px 26px var(--saber);
         }
 
@@ -51,7 +52,7 @@ main {
 
     .temperature {
         width: 90%;
-        margin: 25px auto 0 auto;
+        margin: 20px auto 0 auto;
         display: flex;
         flex-direction: column;
         justify-content: center;
