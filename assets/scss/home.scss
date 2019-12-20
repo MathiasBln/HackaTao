@@ -8,11 +8,15 @@ main {
     .meteo {
 
 
-        h1 {
+        .orleans {
             font-size: 26px;
             margin: 5px 0 5px 30px;
             color: var(--font-color);
             font-weight: 300;
+        }
+
+        .taowars {
+            margin: 0;
         }
 
         .underline {

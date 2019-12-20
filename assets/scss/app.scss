@@ -1,8 +1,8 @@
-$radius:6px;
+$radius: 6px;
 $font-color: #4f4f4f;
-$primary-color:#46B4C7;
+$primary-color: #46B4C7;
 $shadow: 0 3px 9px -2px rgba(0, 0, 0, 0.39);
-$message-radius:20px;
+$message-radius: 20px;
 
 
 @import url('https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900&display=swap');
@@ -11,7 +11,7 @@ $message-radius:20px;
 body {
     background-color: whitesmoke;
     margin: 0;
-    font-family: 'Rubik', sans-serif ;
+    font-family: 'Rubik', sans-serif;
     height: 100vh;
     overflow: hidden;
 }
@@ -25,6 +25,8 @@ body {
     --bg-color: #fff;
     --heading-color: #292922;
     --picture: "https://cdn2.iconfinder.com/data/icons/starwars/icons/128/R2-D2.png";
+    --staowars: #46B4C7;
+    --tao: #fff;
 }
 
 [data-theme="dark"] {
@@ -33,18 +35,30 @@ body {
     --font-color: #ffffff;
     --bg-color: #000000;
     --heading-color: #818cab;
-    --saber:rgb(225,17,17);
+    --saber: rgb(225, 17, 17);
     --picture: "https://cdn0.iconfinder.com/data/icons/star-wars/512/clone-256.png";
+    --staowars: #fff ;
+    --tao: #000000;
 }
 
 .head_container {
     display: flex;
     justify-content: space-between;
+
+    .staowars {
+        color: var(--staowars);
+
+        .tao {
+            color: var(--tao);
+        }
+    }
 }
 
 body {
     background-color: var(--bg-color);
     color: var(--font-color);
+
+
 }
 
 
@@ -69,7 +83,7 @@ body {
 }
 
 .theme-switch input {
-    display:none;
+    display: none;
 }
 
 input:checked + .slider {
@@ -91,6 +105,7 @@ input:checked + .slider:before {
 .tgl {
     display: none;
 }
+
 .tgl, .tgl:after, .tgl:before, .tgl *, .tgl *:after, .tgl *:before, .tgl + .tgl-btn {
     box-sizing: border-box;
 }
@@ -118,10 +133,12 @@ input:checked + .slider:before {
     backface-visibility: hidden;
     border-radius: 4px;
 }
+
 .tgl-flip + .tgl-btn:after {
     content: attr(data-tg-on);
     transform: rotateY(-180deg);
 }
+
 .tgl-flip + .tgl-btn:before {
     content: attr(data-tg-off);
 }
@@ -129,6 +146,7 @@ input:checked + .slider:before {
 .tgl-flip:checked + .tgl-btn:before {
     transform: rotateY(180deg);
 }
+
 .tgl-flip:checked + .tgl-btn:after {
     transform: rotateY(0);
 }

@@ -58,8 +58,8 @@
         };
 
         console.log(stops);
-        var lat = 47.893824;
-        var lon = 1.894932;
+        var lat = 47.896462899999996;
+        var lon = 1.8878935000000001;
         var macarte = null;
         // Fonction d'initialisation de la carte
         function initMap() {
@@ -96,7 +96,7 @@
             })
             console.log(position.coords.latitude, position.coords.longitude);
             var marker = L.marker([position.coords.latitude, position.coords.longitude], {icon: myIconUser}).addTo(macarte);
-            marker.bindPopup("<h4>you</h4>");
+            marker.bindPopup("<h4>Vous êtes ici !</h4>");
         }
         function geo_error() {
             alert("Sorry, no position available.");
