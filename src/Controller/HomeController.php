@@ -54,14 +54,19 @@ class HomeController extends AbstractController
         $content = $response->toArray();
         $probaPluie = $content['forecast'][0]['probarain'];
 
+
+        $meteoMessagesBeau = ["Il fait beau ;)", "Beau aujourd'hui il fait", "Mais quel beau temps !"];
+        $meteoMessagesMoche = ["Il va pleuvoir :(", "Moche il fait aujourd'hui", "Sort la parka" , "brrbrbrrbrrrbrrr"];
+        $recommendations = ['Privilégies le velo ou la marche !', "Le vélo, la marche ou Jabba the Hutt !", ];
+
         if ($probaPluie < 50) {
-            $meteoMessage = "Il fait beau ;))";
+            $meteoMessage = $meteoMessagesBeau[array_rand($meteoMessagesBeau)];
         } else {
-            $meteoMessage = "Il va pleuvoir :((";
+            $meteoMessage = $meteoMessagesMoche[array_rand($meteoMessagesMoche)];
         }
 
         if ($probaPluie < 50 && ($index == 'Bonne' || $index == 'Modérée')) {
-            $recommendation = 'Privilégies le velo ou la marche !';
+            $recommendation = $recommendations[array_rand($recommendations)];
         } else {
             $recommendation = 'Privilégies le bus ou le tram !';
         }
