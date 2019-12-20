@@ -31,19 +31,19 @@ class HomeController extends AbstractController
         }
 
         if ($AQI <= 50) {
-            $image = 'https://cdn2.iconfinder.com/data/icons/starwars/icons/128/clone-1.png';
+            $color = '#019865';
             $index = 'Bonne';
             $pollutionMessage = "Niveau de pollution faible ;)";
         } elseif (50 < $AQI && $AQI <= 100) {
-            $image = 'https://cdn2.iconfinder.com/data/icons/starwars/icons/128/clone-4.png';
+            $color = '#FCDF30';
             $index = 'Modérée';
             $pollutionMessage = "Niveau de pollution modérée :)";
         } elseif (100 < $AQI && $AQI <= 150) {
-            $image = 'https://cdn2.iconfinder.com/data/icons/starwars/icons/128/clone-2.png';
+            $color = '#F89839';
             $index = 'élevée';
             $pollutionMessage = "Niveau de pollution élevée !";
         } else {
-            $image = 'https://cdn2.iconfinder.com/data/icons/starwars/icons/128/clone-3.png';
+            $color = '#CE1F37';
             $index = 'Dangereuse';
             $pollutionMessage = "Niveau de pollution trop élevée !";
         }
@@ -68,7 +68,7 @@ class HomeController extends AbstractController
 
         return $this->render('home/index.html.twig', [
             "AQI" => $AQI,
-            "image" => $image,
+            "color" => $color,
             "index" => $index,
             "pollutionMessage" => $pollutionMessage,
             "meteoMessage" => $meteoMessage,

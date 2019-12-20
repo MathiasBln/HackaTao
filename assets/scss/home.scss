@@ -111,10 +111,11 @@ main {
                 }
             }
 
-            .pastille_casque {
+            .pastille {
                 height: 40px;
                 width: 40px;
-                margin-right: 20px;
+                transform: rotate(45deg);
+                margin-right: 30px;
                 box-shadow: $shadow;
             }
 
