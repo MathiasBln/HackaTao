@@ -86,9 +86,16 @@
                 }
             }
             function geo_success(position) {
+                var iconUser = "https://cdn3.iconfinder.com/data/icons/star-wars-color/193/luke-skywalker-512.png";
+                var myIconUser = L.icon({
+                    iconUrl: iconUser,
+                    iconSize: [50, 50],
+                    iconAnchor: [25, 50],
+                    popupAnchor: [0, -50],
+                })
                 console.log(position.coords.latitude, position.coords.longitude);
-                var marker = L.marker([position.coords.latitude, position.coords.longitude]).addTo(macarte);
-                marker.bindPopup("you");
+                var marker = L.marker([position.coords.latitude, position.coords.longitude], {icon: myIconUser}).addTo(macarte);
+                marker.bindPopup("<h4>you</h4>");
             }
             function geo_error() {
                 alert("Sorry, no position available.");
