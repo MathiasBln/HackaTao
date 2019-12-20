@@ -1,0 +1,105 @@
+{% extends 'base.html.twig' %}
+{% set page = "end" %}
+
+{% block title %}The End{% endblock %}
+{% block stylesheets %}
+    <style>
+
+    body {
+    width: 100%;
+    height: 100%;
+    background: #000;
+    overflow: hidden;
+    }
+
+    .fade {
+    position: relative;
+    width: 100%;
+    min-height: 60vh;
+    background-image: linear-gradient(0deg, transparent, black 75%);
+    z-index: 1;
+    }
+
+    .star-wars {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 800px;
+    color: #feda4a;
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size: 500%;
+    font-weight: 600;
+    letter-spacing: 3px;
+    line-height: 150%;
+    perspective: 400px;
+    text-align: justify;
+    }
+
+    .crawl {
+    position: relative;
+    top: 99999px;
+    transform-origin: 0% 50%;
+    animation: crawl 20s linear;
+    }
+
+    .crawl > .title {
+    font-size: 90%;
+    text-align: center;
+    }
+
+    .crawl > .title h1 {
+    margin: 0 0 100px;
+    text-transform: uppercase;
+    }
+
+    @keyframes crawl {
+    0% {
+    top: -50px;
+    transform: rotateX(20deg)  translateZ(0);
+    }
+    100% {
+    top: -6000px;
+    transform: rotateX(25deg) translateZ(-2500px);
+    }
+    }
+    .byline span {
+    animation: spin-letters 10s linear infinite;
+    }
+
+
+    body {
+    background: #000 url(//cssanimation.rocks/demo/starwars/images/bg.jpg);
+    }
+
+
+    .byline span {
+    display: inline-block;
+    }
+
+    img {
+    width: 100%;
+    }
+
+    </style>
+{% endblock %}
+
+{% block body %}
+    <div class="fade"></div>
+
+    <section class="star-wars">
+        <div class="crawl">
+            <div class="title">
+                <p>STAO WARS</p>
+                <h1>A New wilder</h1>
+            </div>
+
+            <p>It is a period of hacka war. Rebel wilders, striking from a hidden base, have won their first victory against the evil Victoria Empire.</p>
+
+            <p>Pursued by the Empire’s sinister agents, Princess Sylvain races home aboard her bicycle, custodian of the stolen plans that can save her people and restore freedom to the galaxy….</p>
+
+
+
+
+        </div>
+    </section>
+{% endblock %}
